@@ -200,7 +200,17 @@ Route::middleware([AuthCheck::class])->group(function () {
 });
 
 
+Route::get('/banners', function () {
+    return view('admin.banner');
+});
 
+Route::get('/about', function () {
+    return view('admin.about');
+});
+
+Route::get('/whos_comming', function () {
+    return view('admin.whos_comming');
+});
 
 Route::get('logout', [LoginRegister::class, 'logout']);
 

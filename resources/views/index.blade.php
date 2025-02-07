@@ -13,7 +13,18 @@ $price_details_arr = request()->price_details;
     <title>Manup | Home</title>
 
     @include('layouts._css')
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".set-bg").each(function () {
+                var bg = $(this).attr("data-setbg");
+                $(this).css("background-image", "url(" + bg + ")");
+                $(this).css("background-size", "cover");
+                $(this).css("background-position", "center");
+                $(this).css("height", "100vh"); 
+            });
+        });
+    </script>
 
 </head>
 
@@ -28,62 +39,72 @@ $price_details_arr = request()->price_details;
     <!-- Header End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero-section set-bg" data-setbg="img/funevent.webp"
-        ng-init="manup.init({{ isset($price_details_arr) ? $price_details_arr : '[]' }}) ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="hero-text">
-                        <span>5 to 9 may 2019, mardavall hotel, New York</span>
-                        <h2>Change Your Mind<br /> To Become Sucess</h2>
-                        <a href="#ticket_detail_section" class="primary-btn text-decoration-none">Buy Ticket</a>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <section class="hero-section set-bg" data-setbg="img/funevent.webp"
+                    ng-init="manup.init({{ isset($price_details_arr) ? $price_details_arr : '[]' }}) ">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="hero-text">
+                                    <span>5 to 9 May 2019, Mardavall Hotel, New York</span>
+                                    <h2>Change Your Mind<br /> To Become Success</h2>
+                                    <a href="#ticket_detail_section" class="primary-btn text-decoration-none">Buy Ticket</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                {{-- <div class="col-lg-5">
-                    <img src="img/hero-right.png" alt="">
-                </div> --}}
+                </section>
             </div>
-        </div>
-    </section>
 
-    <!-- Hero Section End -->
-
-    <!-- Counter Section Begin -->
-    <!-- <section class="counter-section bg-gradient">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="counter-text">
-                        <span>Conference Date</span>
-                        <h3>Count Every Second <br />Until the Event</h3>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="cd-timer" id="countdown">
-                        <div class="cd-item">
-                            <span>40</span>
-                            <p>Days</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>18</span>
-                            <p>Hours</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>46</span>
-                            <p>Minutes</p>
-                        </div>
-                        <div class="cd-item">
-                            <span>32</span>
-                            <p>Seconds</p>
+            <div class="carousel-item">
+                <section class="hero-section set-bg" data-setbg="img/funevent.webp">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="hero-text">
+                                    <span>10 to 15 June 2020, Hilton Hotel, Paris</span>
+                                    <h2>Unlock Your Potential</h2>
+                                    <a href="#ticket_detail_section" class="primary-btn text-decoration-none">Buy Ticket</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
-        </div>
-    </section> -->
-    <!-- Counter Section End -->
+            
+            <div class="carousel-item">
+                <section class="hero-section set-bg" data-setbg="img/funevent.webp">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <div class="hero-text">
+                                    <span>20 to 25 August 2021, Grand Hotel, London</span>
+                                    <h2>Achieve Your Dreams</h2>
+                                    <a href="#ticket_detail_section" class="primary-btn text-decoration-none">Buy Ticket</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-    <!-- Home About Section Begin -->
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <!-- Bootstrap & jQuery -->
+   
+
+   
     <section class="home-about-section spad">
 
         <div class="container">

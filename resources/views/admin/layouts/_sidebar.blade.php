@@ -52,12 +52,12 @@
                 <h4 class="text-section">Components</h4>
               </li>
               <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#base">
+                <a href="{{url('/banners')}}">
                   <i class="fas fa-layer-group"></i>
-                  <p>Base</p>
-                  <span class="caret"></span>
+                  <p>Banners</p>
+                  <!-- <span class="caret"></span> -->
                 </a>
-                <div class="collapse" id="base">
+                <!-- <div class="collapse" id="base">
                   <ul class="nav nav-collapse">
                     <li>
                       <a href='{!! url('admin/base/avatar') !!}'>
@@ -105,10 +105,14 @@
                       </a>
                     </li>
                   </ul>
-                </div>
-              </li>
+                </div> -->
+              
               <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarLayouts">
+              <a href="{{url('/about')}}">
+              <i class="fas fa-th-list"></i>
+                  <p>About us</p>
+                </a>
+                <!-- <a data-bs-toggle="collapse" href="#sidebarLayouts">
                   <i class="fas fa-th-list"></i>
                   <p>Sidebar Layouts</p>
                   <span class="caret"></span>
@@ -120,21 +124,17 @@
                         <span class="sub-item">Sidebar Style 2</span>
                       </a>
                     </li>
-                    <!-- <li>
-                      <a href="icon-menu.html">
-                        <span class="sub-item">Icon Menu</span>
-                      </a>
-                    </li> -->
+                    
                   </ul>
-                </div>
+                </div> -->
               </li>
               <li class="nav-item">
-                <a data-bs-toggle="collapse" href="#forms">
+              <a href="{{url('/whos_comming')}}">
                   <i class="fas fa-pen-square"></i>
-                  <p>Forms</p>
-                  <span class="caret"></span>
+                  <p>Whos Comming</p>
+                 
                 </a>
-                <div class="collapse" id="forms">
+                <!-- <div class="collapse" id="forms">
                   <ul class="nav nav-collapse">
                     <li>
                       <a href='{!! url('admin/forms/forms') !!}'>
@@ -142,7 +142,7 @@
                       </a>
                     </li>
                   </ul>
-                </div>
+                </div> -->
               </li>
               <li class="nav-item">
                 <a data-bs-toggle="collapse" href="#tables">
