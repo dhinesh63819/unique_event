@@ -73,7 +73,7 @@ Route::get('/refund-and-cancelation-policy', function () {
     return view('refund-and-cancelation-policy');
 });
 
-
+//kkdkhdhdhdjdhfdf 
 
 
 Route::middleware([AuthCheck::class])->group(function () {
